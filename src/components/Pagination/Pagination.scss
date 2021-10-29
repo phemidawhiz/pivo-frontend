@@ -1,0 +1,32 @@
+@import "variables";
+@import "extends";
+
+.pagination {
+  margin-left: 0%;
+  @media #{$mobile-only} {
+    margin: 70px 30px 70px 0px;
+  }
+}
+
+.paginationWrapper {
+  margin: 20px auto;
+  p {
+    @include fontDetails($font-family, 32px, $color-grey-d, 25px, normal, center)
+  }
+
+  span {
+    margin: 0px 12px;
+  }
+}
+
+.arrows {
+  cursor: pointer;
+}
+
+.opacify {
+  display: none !important;
+}
+
+.makeBlack {
+  color: $color-black !important;
+}

@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: normal;
+}
+
+body {
+  padding: none;
+}
+
+.loader {
+  display: block;
+  margin: 50px auto;
+  stroke: rgba(0, 0, 0, .5);
+}
+

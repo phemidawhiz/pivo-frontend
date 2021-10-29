@@ -1,0 +1,14 @@
+@import "variables";
+@import "extends";
+
+.divider {
+  margin: 0px 60px 0px 50px;
+  padding-top: 0px;
+  border: none;
+  border-bottom: 3px solid $ruler !important;
+  @media #{$mobile-only} {
+    padding: 0px;
+    border-bottom: 2.5px solid $ruler !important;
+    margin: 0px -5px !important;
+  }
+}

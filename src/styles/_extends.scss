@@ -1,0 +1,14 @@
+@import "../styles/variables";
+
+@mixin fontDetails($family, $lineHeight, $color, $size, $weight: normal, $alignment: left) {
+  color: $color;
+  font-family: $family;
+  line-height: $lineHeight;
+  text-align: $alignment;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+%commonSpacing {
+  padding: 25px 60px 25px 50px;
+}

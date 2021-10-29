@@ -1,0 +1,47 @@
+
+
+@import "variables";
+@import "extends";
+
+.productsHeader {
+  padding: 30px 43px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  @media #{$mobile-only} {
+    padding: 20px 5px 0px;
+    grid-template-columns: 85% 15%;
+  }
+
+  h4 {
+    @include fontDetails($font-family, 24px, $color-grey-c, 22px, normal, right);
+    float: right;
+    span {
+      color: $color-black;
+      padding-right: 12px;
+      @media #{$mobile-only} {
+        display: none;
+      }
+    }
+  }
+
+  h2 {
+    @include fontDetails($font-family, 33px, $color-black, 30px, bold, left);
+    padding-left: 8px;
+    @media #{$mobile-only} {
+      @include fontDetails($font-family, 20px, $color-black, 18px, bold, left);
+    }
+    span {
+      color: $color-grey-c;
+      font-weight: normal;
+    }
+  }
+
+  .truckLink {
+    color: $color-grey-c !important;
+    cursor: pointer;
+  }
+
+  .truckLink:hover {
+    color: $color-black !important;
+  }
+}

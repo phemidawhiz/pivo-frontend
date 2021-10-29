@@ -1,0 +1,25 @@
+@import "variables";
+@import "extends";
+
+.cartWrapper {
+  display: inline-block;
+  width: 82.5%;
+  padding: 10px 25px;
+  background-color: $color-black;
+  margin-right: 0px;
+  @include fontDetails($font-family, 22px, $color-white, 20px, normal, center);
+  @media #{$mobile-only} {
+    width: 100%;
+  }
+
+  cursor: pointer;
+}
+
+.listCart {
+  margin-top: -85px;
+  @media #{$mobile-only} {
+    width: 86.8%;
+  }
+}
+
+

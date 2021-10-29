@@ -1,0 +1,52 @@
+@import "variables";
+@import "extends";
+
+.categoriesAndPrices {
+  @media #{$mobile-only} {
+    display: none;
+  }
+  padding: 0px 35% 20px 3%;
+  div {
+    padding: 15px 0px;
+    input[type="checkbox"] {
+      height: 19px;
+      width: 19px;
+      border: 2px solid $color-black;
+      margin-right: 15px;
+      box-sizing: border-box;
+      border-radius: 0% !important;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      &:checked {
+        background-color: $color-white !important;
+      }
+    }
+  }
+  label {
+    @include fontDetails($font-family, 24px, $color-grey-e, 22px, normal, left);
+  }
+  h3 {
+    @include fontDetails($font-family, 24px, $color-black, 22px, bold, left);
+  }
+  input {
+    border-radius: 0%;
+    border: 2px solid $color-black;
+    box-sizing: border-box;
+  }
+
+  .hr {
+    border: 0.3px solid $color-grey-b;
+    margin-top: 25px;
+  }
+}
+
+.truckLink {
+  color: $color-grey-c !important;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+.truckLink:hover {
+  color: $color-black !important;
+}

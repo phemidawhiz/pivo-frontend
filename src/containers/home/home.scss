@@ -1,0 +1,85 @@
+@import "variables";
+@import "extends";
+
+.trucks {
+  display: grid;
+  grid-template-columns: 70% 25%;
+  grid-gap: 5%;
+  padding: 0px 43px;
+  @media #{$mobile-only} {
+    display: block;
+    padding: 0px 5px;
+  }
+  .artwork {
+    display: inline-block;
+    width: 282.02px !important;
+    height: 530px !important;
+    padding: 0px;
+    cursor: pointer;
+    @media #{$mobile-only} {
+      width: 100%;
+      margin: 0px 5px 155px !important;
+    }
+    margin: 0px 0px 15px 45px;
+    p {
+      @include fontDetails($font-family, 20px, $color-grey-a, 18px, normal, left);
+      margin: 4px;
+    }
+    h4 {
+      @include fontDetails($font-family, 32px, $color-black, 30px, bold, left);
+      margin: 4px 0px;
+    }
+    h5 {
+      @include fontDetails($font-family, 32px, $color-grey-a, 29px, normal, left);
+      margin: 4px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin-top: 0;
+    }
+  }
+}
+
+.pagination {
+  margin-left: 0%;
+  @media #{$mobile-only} {
+    margin: 70px 30px 70px 0px;
+  }
+}
+
+.topLeft {
+  position: absolute;
+  margin-top: -5px;
+  background-color: $color-white;
+  @include fontDetails($font-family, 22px, $color-black, 20px, normal, center);
+  padding: 5px 15px;
+  @media #{$mobile-only} {
+    left: 9px;
+    @include fontDetails($font-family, 22px, $color-black, 17px, normal, center);
+    padding: 5px 20px;
+  }
+}
+
+.paginationWrapper {
+  margin: 20px auto;
+  p {
+    @include fontDetails($font-family, 32px, $color-grey-d, 25px, normal, center)
+  }
+
+  span {
+    margin: 0px 12px;
+  }
+}
+
+.arrows {
+  cursor: pointer;
+}
+
+.opacify {
+  display: none !important;
+}
+
+.makeBlack {
+  color: $color-black !important;
+}

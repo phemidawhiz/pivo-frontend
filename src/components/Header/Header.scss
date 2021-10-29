@@ -1,0 +1,52 @@
+@import "variables";
+@import "extends";
+
+.headerWrapper {
+  @extend %commonSpacing;
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  @media #{$mobile-only} {
+    padding: 10px 15px;
+  }
+}
+
+.logo {
+  margin-top: 8px !important;
+  h3 {
+    @include fontDetails($font-family, 15px, $color-black, 45px, bold, left);
+    margin-top: 0px;
+  }
+  img {
+    @media #{$mobile-only} {
+      width: 100px;
+      height: auto;
+    }
+  }
+}
+
+.truck {
+  text-align: right;
+  img {
+    cursor: pointer;
+    @media #{$mobile-only} {
+      width: 25px;
+      height: auto;
+    }
+  }
+  span {
+    display: none;
+    margin: 8px 0px -8px -7px;
+    background-color: $color-black;
+    @include fontDetails($font-family, 22px, $color-white, 20px, normal, center);
+    padding: 1px 3px;
+    @media #{$mobile-only} {
+      @include fontDetails($font-family, 16px, $color-white, 14px, normal, center);
+      padding: 1px 2px;
+    }
+  }
+}
+
+.truckItem {
+  float: right;
+}
