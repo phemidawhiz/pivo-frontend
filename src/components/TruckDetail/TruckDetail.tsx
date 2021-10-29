@@ -8,6 +8,7 @@ import modalStyles from "../Modal/Modal.scss";
 import {createTruck, updateTruck} from "../../services/trucks";
 import {AxiosResponse} from "axios";
 import {createTruckLocation} from "../../services/locations";
+import Router from "next/router";
 
 interface IDetailsProp {
   truck: ITruck;
@@ -38,6 +39,7 @@ const TruckDetails: React.SFC<IDetailsProp> = ({
 
       if(response.status === 200) {
         closeEditTruckModal();
+        Router.reload();
       } else {
         setResponseMessage(String(response));
       }
@@ -55,6 +57,7 @@ const TruckDetails: React.SFC<IDetailsProp> = ({
 
       if(response.status === 200) {
         closeCreateTLocationModal();
+
       } else {
         setResponseMessage(String(response));
       }
